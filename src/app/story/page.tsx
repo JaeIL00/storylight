@@ -1,7 +1,7 @@
 "use client";
 
 import { apiStartStory } from "@/app/api/start-story/func";
-import LevelBar from "@/app/components/story/LevelBar";
+import LevelBar from "@/components/story/LevelBar";
 import { useQuery } from "@tanstack/react-query";
 import dayjs from "dayjs";
 import { useState } from "react";
