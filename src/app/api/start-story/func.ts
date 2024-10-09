@@ -5,9 +5,11 @@ import { API } from "..";
 export const apiStartStory = {
   get: async ({ date }: { date: string }) => {
     try {
-      const response = await API.get<GetStartStory[]>(
-        `/api/start-story?date=${date}`
-      );
+      const response = await API.get<GetStartStory[]>("/api/start-story", {
+        params: {
+          date,
+        },
+      });
       return response.data[0];
     } catch (err) {
       const error = err as AxiosError;
